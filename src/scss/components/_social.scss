@@ -1,0 +1,21 @@
+.social {
+  @include flex-v-center;
+  background-color: #ebebeb;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 40px;
+      margin-left: 3px;
+    }
+  }
+  &__link {
+    font-size: 12px;
+    line-height: 68px;
+    letter-spacing: 2.975px;
+    text-transform: uppercase;
+    color: var(--color-black);
+    transition: color 0.2s;
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}

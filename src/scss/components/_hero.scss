@@ -1,0 +1,58 @@
+.hero {
+  background-color: var(--color-black);
+  &__container {
+    position: relative;
+  }
+  &__content {
+    font-size: 0;
+  }
+  // &__img {
+  // }
+  // &__social {
+  // }
+  // &__windows {
+  // }
+  &__window {
+    position: absolute;
+    right: calc(68px + var(--container-offset));
+    bottom: 135px;
+    z-index: 11;
+    max-width: 584px;
+    background-color: var(--color-light);
+    padding: 61px 68px 68px;
+  }
+  &__heading {
+    font-size: 11px;
+    line-height: 17px;
+    letter-spacing: 2.7625px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+  &__title {
+    font-family: "Teko", sans-serif;
+    font-size: 67px;
+    line-height: 67px;
+    text-transform: capitalize;
+    color: var(--color-cod);
+    margin-bottom: 39px;
+  }
+  &__descr {
+    margin-bottom: 15px;
+  }
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    width: 216px;
+  }
+  &__accent-block {
+    position: absolute;
+    right: var(--container-offset);
+    bottom: 0;
+    z-index: 10;
+    width: 489px;
+    height: 329px;
+    background-color: var(--color-accent);
+  }
+}

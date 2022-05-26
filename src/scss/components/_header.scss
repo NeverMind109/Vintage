@@ -1,0 +1,63 @@
+.header {
+  background-color: var(--color-cod);
+  &__container {
+    @include flex-all-sb;
+
+    position: relative;
+    padding: 17px var(--container-offset) 17px
+      calc(326px + var(--container-offset));
+  }
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: var(--container-offset);
+    z-index: 10;
+    padding: 42px 68px;
+    background-color: var(--color-accent);
+  }
+  &__info {
+    @include flex-v-center;
+
+    margin-left: 34px;
+  }
+  &__descr {
+    display: inline-block;
+    font-size: 9px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-right: 11px;
+  }
+  &__text {
+    position: relative;
+    display: inline-block;
+    font-size: 10px;
+    line-height: 15px;
+    color: var(--color-light);
+    padding-right: 25px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 17px;
+      height: 17px;
+      background-image: url("../img/heart.svg");
+      @include bg-cover;
+    }
+  }
+}
+
+.menu--active {
+  opacity: 1;
+  visibility: visible;
+}
+.burger {
+  @include burger;
+  display: none;
+
+  @include tablet {
+    display: flex;
+    z-index: 100;
+  }
+}
