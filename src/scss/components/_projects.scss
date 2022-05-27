@@ -1,0 +1,107 @@
+.projects {
+  background-color: var(--color-light);
+  padding-bottom: 136px;
+  &__slider {
+    position: relative;
+    width: 100%;
+    overflow-x: clip;
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      position: absolute;
+      bottom: -76px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      width: auto;
+    }
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets
+      .swiper-pagination-bullet {
+      margin: 0 5px;
+    }
+    .swiper-pagination-bullet {
+      width: 11px;
+      height: 11px;
+      display: inline-block;
+      border-radius: 0;
+      background: #222222;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 0.4;
+      background: #222222;
+    }
+  }
+}
+.project {
+  position: relative;
+  font-size: 0;
+  margin-top: -138px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 25%;
+    z-index: 5;
+    height: 275px;
+    width: 1px;
+    background-color: var(--color-light);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    z-index: 5;
+    height: 275px;
+    width: 1px;
+    background-color: var(--color-light);
+  }
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 2.72px;
+    text-transform: uppercase;
+    color: var(--color-light);
+    padding: 9px 33px 11px 38px;
+    background-color: var(--color-black);
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 6;
+      height: 275px;
+      width: 1px;
+      background-color: var(--color-light);
+    }
+  }
+  &__style {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    min-width: 206px;
+    min-height: 102px;
+    display: block;
+    text-align: center;
+    background-color: var(--color-accent);
+  }
+  &__title {
+    position: relative;
+    z-index: 6;
+    min-width: 378px;
+    display: inline-block;
+    text-align: center;
+    padding: 15px 0 29px;
+    color: var(--color-light);
+    background-color: var(--color-black);
+  }
+}

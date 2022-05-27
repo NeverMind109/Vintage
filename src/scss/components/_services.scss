@@ -1,0 +1,63 @@
+.services {
+  background-color: var(--color-light);
+  padding-bottom: 107px;
+  &__container {
+    text-align: center;
+  }
+  &__inscription {
+    font-size: 11px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 2.7625px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+  &__title {
+    max-width: 800px;
+    margin: 0 auto 81px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 65px;
+    margin-bottom: 123px;
+  }
+  &__item {
+    grid-column: 1 span;
+  }
+  &__btn-wrapper {
+    text-align: center;
+  }
+  &__btn {
+    display: inline-block;
+    min-width: 392px;
+  }
+}
+.service {
+  padding: 34px 33px 0;
+  text-align: left;
+  &__top {
+    display: flex;
+    margin-bottom: 21px;
+  }
+  &__img {
+    height: 68px;
+    object-fit: initial;
+    margin-right: 17px;
+  }
+  &__date {
+    font-size: 11px;
+    line-height: 17px;
+    letter-spacing: 2.7625px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 18px;
+  }
+  &__title {
+    font-size: 26px;
+    line-height: 26px;
+    text-transform: capitalize;
+    color: var(--color-cod);
+  }
+}
