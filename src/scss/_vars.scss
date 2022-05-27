@@ -4,7 +4,6 @@
   // base
   --font-family: "OpenSans", sans-serif;
   --content-width: 1304px;
-  --header-container-width: 978px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
@@ -14,4 +13,5 @@
   --color-black: #141414;
   --color-cod: #141414;
   --color-shaft: #3d3d3d;
+  --color-gallery: #ebebeb;
 }

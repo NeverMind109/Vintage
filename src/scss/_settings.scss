@@ -104,11 +104,6 @@ a {
   max-width: var(--container-width);
 }
 
-.header-container {
-  margin: 0 0 0 auto;
-  max-width: var(--header-container-width);
-}
-
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }

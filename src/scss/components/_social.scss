@@ -1,6 +1,6 @@
 .social {
   @include flex-v-center;
-  background-color: #ebebeb;
+  background-color: var(--color-gallery);
   &__item {
     &:not(:last-child) {
       margin-right: 40px;

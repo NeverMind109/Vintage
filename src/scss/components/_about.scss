@@ -1,0 +1,94 @@
+.about {
+  background-color: var(--color-gallery);
+  padding: 136px 0 272px;
+  &__info {
+    display: flex;
+    padding: 0 64px;
+    margin-bottom: 50px;
+  }
+  &__content {
+    max-width: 685px;
+    margin-right: 66px;
+  }
+  &__inscription {
+    font-size: 11px;
+    line-height: 17px;
+    letter-spacing: 2.7625px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+  &__title {
+    margin-bottom: 28px;
+  }
+  &__descr {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  &__article {
+    padding: 37px 34px 42px;
+  }
+  &__article-inscription {
+    font-size: 11px;
+    line-height: 17px;
+    letter-spacing: 2.7625px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 9px;
+  }
+  &__article-name {
+    position: relative;
+    padding-right: 41px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 17px;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 1px;
+      background-color: var(--color-accent);
+    }
+  }
+  &__article-title {
+    max-width: 350px;
+  }
+  &__figures {
+    display: flex;
+    padding: 0 62px;
+  }
+  &__figure {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &:not(:last-child) {
+      padding-right: 148px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 68px;
+        transform: translateY(-50%);
+        width: 9px;
+        height: 9px;
+        background-color: var(--color-accent);
+      }
+    }
+  }
+  &__number {
+    font-family: "Teko", sans-serif;
+    font-weight: 700;
+    font-size: 59px;
+    line-height: 59px;
+    color: var(--color-cod);
+    margin-bottom: 12px;
+  }
+  &__value {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 2.975px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+}
