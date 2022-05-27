@@ -52,6 +52,10 @@
   }
   &__article-title {
     max-width: 350px;
+    transition: color 0.2s;
+    &:hover {
+      color: var(--color-accent);
+    }
   }
   &__figures {
     display: flex;

@@ -103,5 +103,9 @@
     padding: 15px 0 29px;
     color: var(--color-light);
     background-color: var(--color-black);
+    transition: color 0.2s;
+    &:hover {
+      color: var(--color-accent);
+    }
   }
 }

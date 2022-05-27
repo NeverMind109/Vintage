@@ -1,0 +1,37 @@
+.partners {
+  background-color: var(--color-gallery);
+  padding: 68px 0;
+  &__list {
+    display: flex;
+    padding: 0 67px;
+  }
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 100px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -62px;
+        transform: translateY(-50%);
+        width: 9px;
+        height: 9px;
+        background-color: var(--color-accent);
+      }
+    }
+  }
+  &__link {
+    svg {
+      width: 154px;
+      height: 38px;
+      fill: var(--color-black);
+      transition: fill 0.2s;
+    }
+    &:hover {
+      svg {
+        fill: var(--color-accent);
+      }
+    }
+  }
+}
