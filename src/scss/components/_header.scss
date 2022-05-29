@@ -6,6 +6,11 @@
     position: relative;
     padding: 17px var(--container-offset) 17px
       calc(326px + var(--container-offset));
+
+    @include mobile {
+      justify-content: flex-end;
+      padding: 17px var(--container-offset);
+    }
   }
   &__logo {
     position: absolute;
@@ -14,11 +19,70 @@
     z-index: 10;
     padding: 42px 68px;
     background-color: var(--color-accent);
+    img {
+      width: 140px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    @include tablet {
+      padding: 20px 35px;
+    }
+    @include mobile {
+      padding: 20px 15px;
+    }
+  }
+  &__nav {
+    @include tablet {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+      height: 100vh;
+      overflow-y: scroll;
+      background-color: var(--color-black);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+  }
+  &__nav-list {
+    @include tablet {
+      @include flex-all-center;
+
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__nav-item {
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 25px;
+    }
+  }
+  &__nav-link {
+    @include tablet {
+      font-size: 20px;
+      line-height: 25px;
+      &:hover {
+        color: currentColor;
+      }
+    }
   }
   &__info {
     @include flex-v-center;
 
     margin-left: 34px;
+
+    @include small-tablet {
+      margin-left: 0;
+    }
+    @include mobile {
+      display: none;
+    }
   }
   &__descr {
     display: inline-block;

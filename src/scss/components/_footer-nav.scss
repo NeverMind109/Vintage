@@ -7,5 +7,21 @@
     justify-content: space-between;
     padding: 65px 68px 32px;
     background-color: var(--color-shaft);
+
+    @include tablet {
+      padding: 65px 10px 32px;
+    }
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    @include small-tablet {
+      margin-bottom: 25px;
+    }
+  }
+
+  @include mobile {
+    display: none;
   }
 }

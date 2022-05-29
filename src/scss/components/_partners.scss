@@ -4,11 +4,33 @@
   &__list {
     display: flex;
     padding: 0 67px;
+
+    @include big-desktop {
+      padding: 0;
+      justify-content: center;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+    }
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__item {
     position: relative;
     &:not(:last-child) {
       margin-right: 100px;
+
+      @include big-desktop {
+        margin-right: 50px;
+      }
+      @include tablet {
+        margin-bottom: 25px;
+      }
+      @include mobile {
+        margin-right: 0;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -18,7 +40,17 @@
         width: 9px;
         height: 9px;
         background-color: var(--color-accent);
+
+        @include big-desktop {
+          right: -25px;
+        }
+        @include small-tablet {
+          display: none;
+        }
       }
+    }
+    &:last-child {
+      margin-bottom: 25px;
     }
   }
   &__link {
@@ -27,11 +59,30 @@
       height: 38px;
       fill: var(--color-black);
       transition: fill 0.2s;
+
+      @include small-tablet {
+        width: 140px;
+        height: 30px;
+      }
+      @include mobile {
+        width: 150px;
+        height: 40px;
+      }
     }
     &:hover {
       svg {
         fill: var(--color-accent);
       }
     }
+  }
+
+  @include desktop {
+    padding: 50px 0 0;
+  }
+  @include tablet {
+    padding: 40px 0 0;
+  }
+  @include mobile {
+    padding: 25px 0 0;
   }
 }

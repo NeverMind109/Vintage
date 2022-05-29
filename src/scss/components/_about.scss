@@ -5,10 +5,34 @@
     display: flex;
     padding: 0 64px;
     margin-bottom: 50px;
+
+    @include desktop {
+      padding: 0;
+    }
+    @include small-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 35px;
+    }
+    @include mobile {
+      margin-bottom: 25px;
+    }
   }
   &__content {
     max-width: 685px;
     margin-right: 66px;
+
+    @include big-desktop {
+      max-width: 60%;
+    }
+    @include desktop {
+      margin-right: 25px;
+    }
+    @include small-tablet {
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 25px;
+    }
   }
   &__inscription {
     font-size: 11px;
@@ -27,6 +51,13 @@
   }
   &__article {
     padding: 37px 34px 42px;
+
+    @include desktop {
+      padding: 35px 0;
+    }
+    @include small-tablet {
+      padding: 15px 0;
+    }
   }
   &__article-inscription {
     font-size: 11px;
@@ -52,14 +83,31 @@
   }
   &__article-title {
     max-width: 350px;
-    transition: color 0.2s;
+    h3 {
+      transition: color 0.2s;
+    }
     &:hover {
-      color: var(--color-accent);
+      h3 {
+        color: var(--color-accent);
+      }
+    }
+
+    @include small-tablet {
+      max-width: none;
     }
   }
   &__figures {
     display: flex;
     padding: 0 62px;
+
+    @include big-desktop {
+      padding: 0;
+      justify-content: center;
+    }
+    @include small-tablet {
+      flex-wrap: wrap;
+      align-items: center;
+    }
   }
   &__figure {
     position: relative;
@@ -68,6 +116,17 @@
     text-align: center;
     &:not(:last-child) {
       padding-right: 148px;
+
+      @include big-desktop {
+        padding-right: 100px;
+      }
+      @include desktop {
+        padding-right: 50px;
+      }
+      @include small-tablet {
+        padding: 0 25px;
+        margin-bottom: 20px;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -77,6 +136,19 @@
         width: 9px;
         height: 9px;
         background-color: var(--color-accent);
+
+        @include big-desktop {
+          right: 50px;
+        }
+        @include desktop {
+          display: none;
+        }
+      }
+    }
+    &:last-child {
+      @include small-tablet {
+        padding: 0 25px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -87,6 +159,15 @@
     line-height: 59px;
     color: var(--color-cod);
     margin-bottom: 12px;
+
+    @include desktop {
+      font-size: 45px;
+      line-height: 45px;
+    }
+    @include mobile {
+      font-size: 40px;
+      line-height: 40px;
+    }
   }
   &__value {
     font-size: 12px;
@@ -94,5 +175,18 @@
     letter-spacing: 2.975px;
     text-transform: uppercase;
     color: var(--color-accent);
+  }
+
+  @include desktop {
+    padding: 100px 0 150px;
+  }
+  @include small-tablet {
+    padding: 75px 0;
+  }
+  @include mobile {
+    padding: 50px 0;
+  }
+  @include mini-mobile {
+    padding: 30px 0;
   }
 }

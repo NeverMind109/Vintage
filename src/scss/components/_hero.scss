@@ -2,16 +2,33 @@
   background-color: var(--color-black);
   &__container {
     position: relative;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__content {
     font-size: 0;
+
+    @include small-tablet {
+      order: 1;
+    }
   }
-  // &__img {
-  // }
-  // &__social {
-  // }
-  // &__windows {
-  // }
+  &__img {
+    @include tablet {
+      height: 600px;
+    }
+    @include small-tablet {
+      height: 300px;
+    }
+    @include mobile {
+      height: 250px;
+    }
+    @include mini-mobile {
+      height: 200px;
+    }
+  }
   &__window {
     position: absolute;
     right: calc(68px + var(--container-offset));
@@ -20,6 +37,26 @@
     max-width: 584px;
     background-color: var(--color-light);
     padding: 61px 68px 68px;
+
+    @include desktop {
+      right: 15%;
+      bottom: 14%;
+    }
+    @include tablet {
+      max-width: 450px;
+      padding: 20px;
+      right: 20%;
+      bottom: 26%;
+    }
+    @include small-tablet {
+      max-width: none;
+      position: static;
+      text-align: center;
+      padding: 60px 25px 35px;
+    }
+    @include mini-mobile {
+      padding: 50px 5px 20px;
+    }
   }
   &__heading {
     font-size: 11px;
@@ -35,6 +72,12 @@
     text-transform: capitalize;
     color: var(--color-cod);
     margin-bottom: 39px;
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 45px;
+      margin-bottom: 20px;
+    }
   }
   &__descr {
     margin-bottom: 15px;
@@ -42,10 +85,35 @@
   &__btns {
     display: flex;
     justify-content: space-between;
+
+    @include small-tablet {
+      justify-content: center;
+    }
+    @include mini-mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__btn {
     display: inline-block;
     width: 216px;
+    &:not(:last-child) {
+      @include small-tablet {
+        margin-right: 15px;
+      }
+      @include mini-mobile {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    @include tablet {
+      width: 190px;
+    }
+    @include mini-mobile {
+      width: 100%;
+      padding: 20px;
+    }
   }
   &__accent-block {
     position: absolute;
@@ -55,5 +123,19 @@
     width: 489px;
     height: 329px;
     background-color: var(--color-accent);
+
+    @include desktop {
+      width: 350px;
+      height: 230px;
+    }
+    @include tablet {
+      width: 250px;
+      height: 170px;
+      bottom: 15%;
+      right: 10%;
+    }
+    @include small-tablet {
+      display: none;
+    }
   }
 }
