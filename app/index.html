@@ -3,6 +3,7 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="theme-color" content="#111111" />
   <title>Vintage</title>
@@ -105,13 +106,17 @@
         <section class="hero">
   <div class="container hero__container">
     <div class="hero__content">
-      <img
-        class="hero__img"
-        src="img/hero-img.jpg"
-        alt=""
-        width="978"
-        height="590"
-      />
+      <picture>
+        <source srcset="img/hero-img.avif" type="image/avif" />
+        <source srcset="img/hero-img.webp" type="image/webp" />
+        <img
+          class="hero__img"
+          src="img/hero-img.jpg"
+          width="978"
+          height="590"
+          alt=""
+        />
+      </picture>
       <ul class="list-reset social hero__social">
         <li class="social__item">
           <a class="social__link" href="#">facebook</a>
@@ -221,13 +226,18 @@
     <div class="projects__slider">
       <div class="swiper-wrapper">
         <div class="swiper-slide project">
-          <img
-            class="project__img"
-            src="img/project-1.jpg"
-            alt="House Living Room"
-            width="412"
-            height="275"
-          />
+          <picture>
+            <source srcset="img/project-1.avif" type="image/avif" />
+            <source srcset="img/project-1.webp" type="image/webp" />
+            <img
+              class="project__img"
+              loading="lazy"
+              src="img/project-1.jpg"
+              width="412"
+              height="275"
+              alt="House Living Room"
+            />
+          </picture>
           <span class="project__label">new</span>
           <span class="text project__style">Interior Design</span>
           <a class="section-subtitle project__title" href="#"
@@ -235,13 +245,18 @@
           >
         </div>
         <div class="swiper-slide project">
-          <img
-            class="project__img"
-            src="img/project-2.jpg"
-            alt="House Living Room"
-            width="412"
-            height="275"
-          />
+          <picture>
+            <source srcset="img/project-2.avif" type="image/avif" />
+            <source srcset="img/project-2.webp" type="image/webp" />
+            <img
+              class="project__img"
+              loading="lazy"
+              src="img/project-2.jpg"
+              width="412"
+              height="275"
+              alt="Ocean View House"
+            />
+          </picture>
           <span class="project__label">new</span>
           <span class="text project__style">Architecture</span>
           <a class="section-subtitle project__title" href="#"
@@ -249,13 +264,18 @@
           >
         </div>
         <div class="swiper-slide project">
-          <img
-            class="project__img"
-            src="img/project-3.jpg"
-            alt="House Living Room"
-            width="412"
-            height="275"
-          />
+          <picture>
+            <source srcset="img/project-3.avif" type="image/avif" />
+            <source srcset="img/project-3.webp" type="image/webp" />
+            <img
+              class="project__img"
+              loading="lazy"
+              src="img/project-3.jpg"
+              width="412"
+              height="275"
+              alt="Interior Design"
+            />
+          </picture>
           <span class="project__label">new</span>
           <span class="text project__style">Interior Design</span>
           <a class="section-subtitle project__title" href="#"
@@ -263,13 +283,18 @@
           >
         </div>
         <div class="swiper-slide project">
-          <img
-            class="project__img"
-            src="img/project-1.jpg"
-            alt="House Living Room"
-            width="412"
-            height="275"
-          />
+          <picture>
+            <source srcset="img/project-1.avif" type="image/avif" />
+            <source srcset="img/project-1.webp" type="image/webp" />
+            <img
+              class="project__img"
+              loading="lazy"
+              src="img/project-1.jpg"
+              width="412"
+              height="275"
+              alt="Interior Design"
+            />
+          </picture>
           <span class="project__label">new</span>
           <span class="text project__style">Interior Design</span>
           <a class="section-subtitle project__title" href="#"
@@ -414,35 +439,35 @@
   <div class="container">
     <ul class="list-reset partners__list">
       <li class="partners__item">
-        <a class="partners__link" href="#">
+        <a class="partners__link" href="#" aria-label="Artzo Company Link">
           <svg>
             <use xlink:href="img/sprite.svg#partner-1"></use>
           </svg>
         </a>
       </li>
       <li class="partners__item">
-        <a class="partners__link" href="#">
+        <a class="partners__link" href="#" aria-label="Antartica Company Link">
           <svg>
             <use xlink:href="img/sprite.svg#partner-2"></use>
           </svg>
         </a>
       </li>
       <li class="partners__item">
-        <a class="partners__link" href="#">
+        <a class="partners__link" href="#" aria-label="Captain Company Link">
           <svg>
             <use xlink:href="img/sprite.svg#partner-3"></use>
           </svg>
         </a>
       </li>
       <li class="partners__item">
-        <a class="partners__link" href="#">
+        <a class="partners__link" href="#" aria-label="Cupcakes Company Link">
           <svg>
             <use xlink:href="img/sprite.svg#partner-4"></use>
           </svg>
         </a>
       </li>
       <li class="partners__item">
-        <a class="partners__link" href="#">
+        <a class="partners__link" href="#" aria-label="Choc Company Link">
           <svg>
             <use xlink:href="img/sprite.svg#partner-5"></use>
           </svg>
@@ -501,7 +526,7 @@
           placeholder="Newsletter (Emter Email)"
           required
         />
-        <button class="btn-reset btn btn--secondary footer__btn">
+        <button class="btn-reset btn btn--secondary footer__btn" type="submit">
           Subscribe
         </button>
       </form>

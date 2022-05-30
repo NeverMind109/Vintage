@@ -1,13 +1,17 @@
 <section class="hero">
   <div class="container hero__container">
     <div class="hero__content">
-      <img
-        class="hero__img"
-        src="img/hero-img.jpg"
-        alt=""
-        width="978"
-        height="590"
-      />
+      <picture>
+        <source srcset="img/hero-img.avif" type="image/avif" />
+        <source srcset="img/hero-img.webp" type="image/webp" />
+        <img
+          class="hero__img"
+          src="img/hero-img.jpg"
+          width="978"
+          height="590"
+          alt=""
+        />
+      </picture>
       <ul class="list-reset social hero__social">
         <li class="social__item">
           <a class="social__link" href="#">facebook</a>
