@@ -1,12 +1,18 @@
 .header {
-  background-color: var(--color-cod);
+  background-color: var(--color-black);
   &__container {
     @include flex-all-sb;
 
     position: relative;
-    padding: 17px var(--container-offset) 17px
-      calc(326px + var(--container-offset));
+    max-width: var(--content-width);
+    padding: 17px 0 17px 326px;
+    background-color: var(--color-cod);
 
+    @include desktop {
+      max-width: var(--container-width);
+      padding: 17px var(--container-offset) 17px
+        calc(326px + var(--container-offset));
+    }
     @include mobile {
       justify-content: flex-end;
       padding: 17px var(--container-offset);

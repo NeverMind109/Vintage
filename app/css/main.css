@@ -84,6 +84,10 @@ html {
   font-size: 16px;
 }
 
+.main {
+  margin-top: -1px;
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -389,7 +393,7 @@ a {
 }
 
 .header {
-  background-color: var(--color-cod);
+  background-color: var(--color-black);
 }
 .header__container {
   display: -webkit-box;
@@ -402,7 +406,15 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
-  padding: 17px var(--container-offset) 17px calc(326px + var(--container-offset));
+  max-width: var(--content-width);
+  padding: 17px 0 17px 326px;
+  background-color: var(--color-cod);
+}
+@media (max-width: 1200px) {
+  .header__container {
+    max-width: var(--container-width);
+    padding: 17px var(--container-offset) 17px calc(326px + var(--container-offset));
+  }
 }
 @media (max-width: 576px) {
   .header__container {
